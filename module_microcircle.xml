@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_microcircle" default="compile.module.microcircle">
+  <dirname property="module.microcircle.basedir" file="${ant.file.module_microcircle}"/>
+  
+  <property name="module.jdk.home.microcircle" value="${jdk.home.1.7}"/>
+  <property name="module.jdk.bin.microcircle" value="${jdk.bin.1.7}"/>
+  <property name="module.jdk.classpath.microcircle" value="jdk.classpath.1.7"/>
+  
+  <property name="compiler.args.microcircle" value="-encoding UTF-8 -source 1.6 ${compiler.args}"/>
+  
+  <property name="microcircle.output.dir" value="${module.microcircle.basedir}/target/classes"/>
+  <property name="microcircle.testoutput.dir" value="${module.microcircle.basedir}/target/test-classes"/>
+  
+  <path id="microcircle.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="microcircle.module.production.classpath">
+    <path refid="${module.jdk.classpath.microcircle}"/>
+    <path refid="library.spring-4.3.7.release.classpath"/>
+    <path refid="library.spring_mvc-4.3.7.release.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.1.1.classpath"/>
+    <path refid="library.maven:_aopalliance:aopalliance:1.0.classpath"/>
+    <path refid="library.maven:_org.mybatis:mybatis:3.2.4.classpath"/>
+    <path refid="library.maven:_org.mybatis:mybatis-spring:1.2.2.classpath"/>
+    <path refid="library.maven:_mysql:mysql-connector-java:5.1.29.classpath"/>
+    <path refid="library.maven:_com.alibaba:druid:1.0.2.classpath"/>
+    <path refid="library.maven:_org.codehaus.jackson:jackson-mapper-asl:1.9.13.classpath"/>
+    <path refid="library.maven:_org.codehaus.jackson:jackson-core-asl:1.9.13.classpath"/>
+    <path refid="library.maven:_log4j:log4j:1.2.9.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-api:1.6.6.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-log4j12:1.6.6.classpath"/>
+    <path refid="library.maven:_org.mybatis:mybatis:3.4.2.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-webmvc:4.3.7.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-core:4.3.7.release.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_org.mybatis:mybatis-spring:1.3.1.classpath"/>
+    <path refid="library.maven:_log4j:log4j:1.2.17.classpath"/>
+  </path>
+  
+  <path id="microcircle.runtime.production.module.classpath">
+    <pathelement location="${microcircle.output.dir}"/>
+    <path refid="library.spring-4.3.7.release.classpath"/>
+    <path refid="library.spring_mvc-4.3.7.release.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.1.1.classpath"/>
+    <path refid="library.maven:_aopalliance:aopalliance:1.0.classpath"/>
+    <path refid="library.maven:_org.mybatis:mybatis:3.2.4.classpath"/>
+    <path refid="library.maven:_org.mybatis:mybatis-spring:1.2.2.classpath"/>
+    <path refid="library.maven:_mysql:mysql-connector-java:5.1.29.classpath"/>
+    <path refid="library.maven:_com.alibaba:druid:1.0.2.classpath"/>
+    <path refid="library.maven:_org.codehaus.jackson:jackson-mapper-asl:1.9.13.classpath"/>
+    <path refid="library.maven:_org.codehaus.jackson:jackson-core-asl:1.9.13.classpath"/>
+    <path refid="library.maven:_log4j:log4j:1.2.9.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-api:1.6.6.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-log4j12:1.6.6.classpath"/>
+    <path refid="library.maven:_org.mybatis:mybatis:3.4.2.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-webmvc:4.3.7.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-core:4.3.7.release.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_org.mybatis:mybatis-spring:1.3.1.classpath"/>
+    <path refid="library.maven:_log4j:log4j:1.2.17.classpath"/>
+  </path>
+  
+  <path id="microcircle.module.classpath">
+    <path refid="${module.jdk.classpath.microcircle}"/>
+    <pathelement location="${microcircle.output.dir}"/>
+    <path refid="library.spring-4.3.7.release.classpath"/>
+    <path refid="library.spring_mvc-4.3.7.release.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.1.1.classpath"/>
+    <path refid="library.maven:_aopalliance:aopalliance:1.0.classpath"/>
+    <path refid="library.maven:_org.mybatis:mybatis:3.2.4.classpath"/>
+    <path refid="library.maven:_org.mybatis:mybatis-spring:1.2.2.classpath"/>
+    <path refid="library.maven:_mysql:mysql-connector-java:5.1.29.classpath"/>
+    <path refid="library.maven:_junit:junit:4.11.classpath"/>
+    <path refid="library.maven:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+    <path refid="library.maven:_com.alibaba:druid:1.0.2.classpath"/>
+    <path refid="library.maven:_org.codehaus.jackson:jackson-mapper-asl:1.9.13.classpath"/>
+    <path refid="library.maven:_org.codehaus.jackson:jackson-core-asl:1.9.13.classpath"/>
+    <path refid="library.maven:_log4j:log4j:1.2.9.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-api:1.6.6.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-log4j12:1.6.6.classpath"/>
+    <path refid="library.maven:_org.mybatis:mybatis:3.4.2.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-webmvc:4.3.7.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-core:4.3.7.release.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_org.mybatis:mybatis-spring:1.3.1.classpath"/>
+    <path refid="library.maven:_log4j:log4j:1.2.17.classpath"/>
+  </path>
+  
+  <path id="microcircle.runtime.module.classpath">
+    <pathelement location="${microcircle.testoutput.dir}"/>
+    <pathelement location="${microcircle.output.dir}"/>
+    <path refid="library.spring-4.3.7.release.classpath"/>
+    <path refid="library.spring_mvc-4.3.7.release.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.1.1.classpath"/>
+    <path refid="library.maven:_aopalliance:aopalliance:1.0.classpath"/>
+    <path refid="library.maven:_org.mybatis:mybatis:3.2.4.classpath"/>
+    <path refid="library.maven:_org.mybatis:mybatis-spring:1.2.2.classpath"/>
+    <path refid="library.maven:_mysql:mysql-connector-java:5.1.29.classpath"/>
+    <path refid="library.maven:_junit:junit:4.11.classpath"/>
+    <path refid="library.maven:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+    <path refid="library.maven:_com.alibaba:druid:1.0.2.classpath"/>
+    <path refid="library.maven:_org.codehaus.jackson:jackson-mapper-asl:1.9.13.classpath"/>
+    <path refid="library.maven:_org.codehaus.jackson:jackson-core-asl:1.9.13.classpath"/>
+    <path refid="library.maven:_log4j:log4j:1.2.9.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-api:1.6.6.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-log4j12:1.6.6.classpath"/>
+    <path refid="library.maven:_org.mybatis:mybatis:3.4.2.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-webmvc:4.3.7.release.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-core:4.3.7.release.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_org.mybatis:mybatis-spring:1.3.1.classpath"/>
+    <path refid="library.maven:_log4j:log4j:1.2.17.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.microcircle">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.microcircle">
+    <patternset refid="excluded.from.module.microcircle"/>
+  </patternset>
+  
+  <path id="microcircle.module.sourcepath">
+    <dirset dir="${module.microcircle.basedir}">
+      <include name="src/main/java"/>
+      <include name="src/main/resources"/>
+    </dirset>
+  </path>
+  
+  <path id="microcircle.module.test.sourcepath">
+    <dirset dir="${module.microcircle.basedir}">
+      <include name="src/test/java"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.microcircle" depends="compile.module.microcircle.production,compile.module.microcircle.tests" description="Compile module MicroCircle"/>
+  
+  <target name="compile.module.microcircle.production" depends="register.custom.compilers" description="Compile module MicroCircle; production classes">
+    <mkdir dir="${microcircle.output.dir}"/>
+    <javac2 destdir="${microcircle.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.microcircle}/javac">
+      <compilerarg line="${compiler.args.microcircle}"/>
+      <bootclasspath refid="microcircle.module.bootclasspath"/>
+      <classpath refid="microcircle.module.production.classpath"/>
+      <src refid="microcircle.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.microcircle"/>
+    </javac2>
+    
+    <copy todir="${microcircle.output.dir}">
+      <fileset dir="${module.microcircle.basedir}/src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.microcircle.basedir}/src/main/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.microcircle.tests" depends="register.custom.compilers,compile.module.microcircle.production" description="compile module MicroCircle; test classes" unless="skip.tests">
+    <mkdir dir="${microcircle.testoutput.dir}"/>
+    <javac2 destdir="${microcircle.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.microcircle}/javac">
+      <compilerarg line="${compiler.args.microcircle}"/>
+      <bootclasspath refid="microcircle.module.bootclasspath"/>
+      <classpath refid="microcircle.module.classpath"/>
+      <src refid="microcircle.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.microcircle"/>
+    </javac2>
+    
+    <copy todir="${microcircle.testoutput.dir}">
+      <fileset dir="${module.microcircle.basedir}/src/test/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.microcircle" description="cleanup module">
+    <delete dir="${microcircle.output.dir}"/>
+    <delete dir="${microcircle.testoutput.dir}"/>
+  </target>
+</project>
