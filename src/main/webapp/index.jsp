@@ -8,7 +8,10 @@
 </head>
 <body>
 <h1>成就你我，欢迎你！！！</h1>
+<h2>bootstrap demo</h2><br/>
 <a href="modules/test/FormDemo.html">Form demo</a><br/>
-<a href="modules/test/scrollspy.html">bootstrap demo</a>
+<a href="modules/test/scrollspy.html">bootstrap demo</a><br/><br/>
+<h2>AngularJSDemo</h2>
+<a href="modules/test/AngularJSDemo.html">AngularJS demo</a><br/>
 </body>
 </html>
