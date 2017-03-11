@@ -1,2 +1,2 @@
 # MicroCircle
-spring mvc+mybaies+mysql+bootstrap+angularjs demo...........
+spring mvc+mybaies+mysql+bootstrap+angularjs
